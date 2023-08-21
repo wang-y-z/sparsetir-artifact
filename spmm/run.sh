@@ -18,7 +18,7 @@ do
   do
     # dgsparse
     echo "Running dgsparse SpMM on ${dataset}, feat_size = ${feat_size}"
-    dgsparse-gespmm data/${dataset}.npz ${feat_size} > dgsparse_${dataset}_${feat_size}.log 2> dgsparse_${dataset}_${feat_size}.log
+    dgsparse-gespmm data/${dataset}.npz ${feat_size} > dgsparse_${dataset}_${feat_size}.log 2> dgsparse_${dataset}_${feat_size}.err
     # sputnik
     echo "Running sputnik SpMM on ${dataset}, feat_size = ${feat_size}"
     sputnik_spmm_benchmark data/${dataset}.npz ${feat_size} > sputnik_${dataset}_${feat_size}.log 2> sputnik_${dataset}_${feat_size}.err
